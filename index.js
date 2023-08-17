@@ -7,9 +7,11 @@ const cardsPositionsEl = containerEl.querySelectorAll(".card-position")
 let angle = 0;
 //卡片围绕的圆周半径
 const radius = 500;
-//摩擦力
+//固定摩擦力 摩擦力为固定值
 const friction = 0.1;
-//绝对角速度
+//空气阻力系数(速度会受到空气阻力的影响，速度越大。空气阻力越大)
+const airDragCoefficient = 0.02;
+// 角速度绝对值
 let absoluteSpeed = 0;
 //速度方向 +1为正 -1为负
 let speedDirection = +1;
@@ -34,13 +36,13 @@ const draw = () => {
         //位移=基础位移+绝对速度*速度方向
         angle = angle + absoluteSpeed * speedDirection;
         //速度会由于阻力降低
-        absoluteSpeed -= friction;
+        absoluteSpeed -= friction + (absoluteSpeed * airDragCoefficient);
         if (absoluteSpeed < 0) {
             //绝对速度不可能为负值
             absoluteSpeed = 0;
         }
     }
-    requestAnimationFrame(draw)//由于使用该函数，时间上是均匀的
+    requestAnimationFrame(draw)//由于使用该函数，时间上基本是均匀的
 }
 
 draw();
