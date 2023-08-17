@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  box-shadow: 0 0 0 1px #000 inset;
+  width: 1000px;
+  height: 600px;
+  position: relative;
+  perspective-origin: center center;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+.card-position {
+  position: absolute;
+  left: 350px;
+  top: 50px;
+  width: 300px;
+  height: 500px;
+  perspective: 1000px;
+}
+.card-position:nth-of-type(1) {
+  transform: translateZ(-500px) rotateY(0deg) translateZ(530px);
+}
+.card-position:nth-of-type(1) .card {
+  background-image: url("https://game.gtimg.cn/images/lol/act/img/skinloading/3000.jpg");
+}
+.card-position:nth-of-type(2) {
+  transform: translateZ(-500px) rotateY(36deg) translateZ(530px);
+}
+.card-position:nth-of-type(2) .card {
+  background-image: url("https://game.gtimg.cn/images/lol/act/img/skinloading/055ba99c-410c-49c9-9ee1-e32aab839d4d.jpg");
+}
+.card-position:nth-of-type(3) {
+  transform: translateZ(-500px) rotateY(72deg) translateZ(530px);
+}
+.card-position:nth-of-type(3) .card {
+  background-image: url("https://game.gtimg.cn/images/lol/act/img/skinloading/d562ad40-d07f-48b5-a3ab-a86e70dc8a3a.jpg");
+}
+.card-position:nth-of-type(4) {
+  transform: translateZ(-500px) rotateY(108deg) translateZ(530px);
+}
+.card-position:nth-of-type(4) .card {
+  background-image: url("https://game.gtimg.cn/images/lol/act/img/skinloading/30153f50-8567-4c30-bd15-1c7b01b92826.jpg");
+}
+.card-position:nth-of-type(5) {
+  transform: translateZ(-500px) rotateY(144deg) translateZ(530px);
+}
+.card-position:nth-of-type(5) .card {
+  background-image: url("https://game.gtimg.cn/images/lol/act/img/skinloading/d0c65ae6-a30a-4509-b645-3208a8814220.jpg");
+}
+.card-position:nth-of-type(6) {
+  transform: translateZ(-500px) rotateY(180deg) translateZ(530px);
+}
+.card-position:nth-of-type(6) .card {
+  background-image: url("https://game.gtimg.cn/images/lol/act/img/skinloading/3000.jpg");
+}
+.card-position:nth-of-type(7) {
+  transform: translateZ(-500px) rotateY(216deg) translateZ(530px);
+}
+.card-position:nth-of-type(7) .card {
+  background-image: url("https://game.gtimg.cn/images/lol/act/img/skinloading/055ba99c-410c-49c9-9ee1-e32aab839d4d.jpg");
+}
+.card-position:nth-of-type(8) {
+  transform: translateZ(-500px) rotateY(252deg) translateZ(530px);
+}
+.card-position:nth-of-type(8) .card {
+  background-image: url("https://game.gtimg.cn/images/lol/act/img/skinloading/d562ad40-d07f-48b5-a3ab-a86e70dc8a3a.jpg");
+}
+.card-position:nth-of-type(9) {
+  transform: translateZ(-500px) rotateY(288deg) translateZ(530px);
+}
+.card-position:nth-of-type(9) .card {
+  background-image: url("https://game.gtimg.cn/images/lol/act/img/skinloading/30153f50-8567-4c30-bd15-1c7b01b92826.jpg");
+}
+.card-position:nth-of-type(10) {
+  transform: translateZ(-500px) rotateY(324deg) translateZ(530px);
+}
+.card-position:nth-of-type(10) .card {
+  background-image: url("https://game.gtimg.cn/images/lol/act/img/skinloading/d0c65ae6-a30a-4509-b645-3208a8814220.jpg");
+}
+.card {
+  user-select: none;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #f5bb7a;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.card-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  line-height: 5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+}
