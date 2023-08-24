@@ -24,6 +24,7 @@ body {
   perspective: 1000px;
 }
 .card-position {
+  backface-visibility: hidden;
   position: absolute;
   left: 350px;
   top: 50px;
